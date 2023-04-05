@@ -67,3 +67,4 @@
 
    ```bin/kafka-console-producer --broker-list localhost:9092 --topic NewTopic1 <bin/customers.csv```
    
+   
