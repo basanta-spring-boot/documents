@@ -44,7 +44,7 @@
 
 3. Create topic
 
-    ```bin/kafka-topics --bootstrap-server localhost:9092 --create --topic NewTopic --partitions 3 --replication-factor 1```
+    ```bin/kafka-topics --bootstrap-server localhost:9092 --create --topic NewTopic1 --partitions 3 --replication-factor 1```
 
 4. list out all topic names
 
@@ -52,18 +52,18 @@
 
 5. Describe topics
   
-    ``` bin/kafka-topics --bootstrap-server localhost:9092 --describe --topic NewTopic ```
+    ``` bin/kafka-topics --bootstrap-server localhost:9092 --describe --topic NewTopic1 ```
 
 6. Produce message
 
-    ```bin/kafka-console-producer --broker-list localhost:9092 --topic NewTopic```
+    ```bin/kafka-console-producer --broker-list localhost:9092 --topic NewTopic1```
 
 
 7. consume message
 
-    ```bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic NewTopic --from-beginning ```
+    ```bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic NewTopic1 --from-beginning ```
     
 8. Send CSV File data to kafka    
 
-   ```bin/kafka-console-producer --broker-list localhost:9092 --topic NewTopic <bin/customers.csv```
+   ```bin/kafka-console-producer --broker-list localhost:9092 --topic NewTopic1 <bin/customers.csv```
    
