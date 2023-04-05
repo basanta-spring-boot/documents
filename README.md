@@ -40,7 +40,7 @@
 
 2. Start Kafka Server / Broker
 
-    ``bin/kafka-server-start etc/kafka/server.properties```
+    ```bin/kafka-server-start etc/kafka/server.properties```
 
 3. Create topic
 
