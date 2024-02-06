@@ -6,30 +6,50 @@
 
     ```sh bin/zookeeper-server-start.sh config/zookeeper.properties```
 
-2. Start Kafka Server / Broker
+   ```bin\windows\zookeeper-server-start.bat config\zookeeper.properties```
+
+3. Start Kafka Server / Broker
 
     ```sh bin/kafka-server-start.sh config/server.properties```
 
-3. Create topic
+   ```bin\windows\kafka-server-start.bat config\server.properties```
+
+5. Create topic
 
     ```sh bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic NewTopic --partitions 3 --replication-factor 1```
 
-4. list out all topic names
+   ```bin\windows\kafka-topics.bat --create --topic user-topic --bootstrap-server localhost:9092```
+
+   ```bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --create --topic user-topic --partitions 3 --replication-factor 1```
+
+7. list out all topic names
 
     ``` sh bin/kafka-topics.sh --bootstrap-server localhost:9092 --list ```
+   
+    ```bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --list ```
 
-5. Describe topics
+9. Describe topics
   
     ``` sh bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic NewTopic ```
 
-6. Produce message
+    ``` bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic user-topic```
+
+11. Produce message
 
     ```sh bin/kafka-console-producer.sh --broker-list localhost:9092 --topic NewTopic```
 
+    ```bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic user-topic```
 
-7. consume message
+    ```bin\windows\kafka-console-producer.bat --topic user-topic --bootstrap-server localhost:9092```
+
+
+13. consume message
 
     ``` sh bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic NewTopic --from-beginning ```
+
+    ```bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic user-topic --from-beginning```
+
+    ```bin\windows\kafka-console-consumer.bat --topic user-topic --from-beginning --bootstrap-server localhost:9092```
 
 
 ## Confluent Kafka Community Edition in local ##
