@@ -87,3 +87,20 @@ CMD ["java", "-jar", "spring-docker.jar"]
    ```bash
    docker commit 8656335d1238 my-custom-image:latest
    ```
+
+8. **Docker Login**
+   ```bash
+   docker login
+   ```
+9. **Docker tag image**
+     ```bash
+     docker tag spring-docker:1.0 javatechie/spring-docker:1.0
+    ```
+10. **Docker push**
+   ```bash
+   docker push javatechie/spring-docker:1.0
+   ```
+11. **Docker Pull**
+   ```bash
+   docker pull javatechie/spring-docker:1.0
+   ```
