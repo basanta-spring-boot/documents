@@ -43,22 +43,27 @@ CMD ["java", "-jar", "spring-docker.jar"]
    docker run -d -p 7070:8181 spring-docker-app:1.0
    ```
 
+   you can also set the name of your conatiner
+   ```bash
+   docker run --name user-app-container -d -p 7070:8181 7b763b737a36
+   ```
+
    Describe about `-p <HOST-MACHINE-PORT>:<CONTAINER-PORT>`
    `-p 7070:8181`: This option maps port 8181 of the Docker container to port 7070 of the host machine. This means that any traffic coming to port 7070 on the host machine will be forwarded to port 8181 inside the Docker container where the Spring Boot application is running. This is essential for accessing the Spring Boot application from outside the container.
 
-4. **Check status of running container**
+5. **Check status of running container**
 
    ```bash
    docker ps
    ```
 
-5. **Stop running container**
+6. **Stop running container**
 
    ```bash
    docker stop <container_id>
    ```
 
-6. **Debug your Docker container**
+7. **Debug your Docker container**
 
    - Check logs of your container
 
@@ -72,7 +77,7 @@ CMD ["java", "-jar", "spring-docker.jar"]
      docker exec -it 8656335d1238 /bin/bash
      ```
 
-7. **Docker Commit**
+8. **Docker Commit**
 
    Docker commit is a command used to create a new Docker image from the changes made to a container. This can be useful when you have made modifications or updates to a container and want to save those changes as a new image, which can be used to create new containers or shared with others.
 
@@ -88,15 +93,15 @@ CMD ["java", "-jar", "spring-docker.jar"]
    docker commit 8656335d1238 my-custom-image:latest
    ```
 
-8. **Docker Login**
+9. **Docker Login**
    ```bash
    docker login
    ```
-9. **Docker tag image**
+10. **Docker tag image**
      ```bash
      docker tag spring-docker:1.0 javatechie/spring-docker:1.0
     ```
-10. **Docker push**
+11. **Docker push**
    ```bash
    docker push javatechie/spring-docker:1.0
    ```
